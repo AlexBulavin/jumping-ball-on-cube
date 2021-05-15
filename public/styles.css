@@ -36,8 +36,10 @@ body {
   left: -0.5em;
   bottom: 1em;
   background-image: radial-gradient(circle at top, lightblue, 50%, #000);
-  animation: ballBaunce var(--bounceSpeed) infinite ease-out,
-    ballRotate var(--rotateSpeed) infinite linear reverse;
+  animation: 
+    ballBaunce var(--bounceSpeed) infinite ease-out,
+    ballRotate var(--rotateSpeed) infinite linear reverse,
+    ballColorChange var(--rotateSpeed) infinite linear;
 }
 @keyframes ballRotate {
   to {
@@ -55,13 +57,34 @@ body {
   }
 }
 
+
+@keyframes ballColorChange {
+  20% {
+    background: rgb(255, 72, 0);
+  }
+  40% {
+    background: gold;
+    
+  }
+  60% {
+    background: rgb(30, 155, 4);
+   
+  }
+  80% {
+  background: rgb(7, 44, 44);
+  }
+}
+
+
 .cube {
   width: 2em;
   height: 2em;
   position: absolute;
   bottom: -1em;
   left: -1em;
-  animation: cubeHight var(--bounceSpeed) infinite linear;
+  animation: 
+  cubeHight var(--bounceSpeed) infinite linear,
+  cubeColorChange var(--rotateSpeed) infinite linear;
 }
 @keyframes cubeHight {
   0%,
@@ -71,6 +94,21 @@ body {
   8%,
   93.5% {
     height: 2em;
+  }
+}
+
+@keyframes cubeColorChange {
+  0% {
+    background: var(--boxColor);
+  }
+  50% {
+    background: rgb(230, 226, 2);
+  }
+  85% {
+    background: rgb(199, 12, 12);
+  }
+  100% {
+    background: var(--boxColor);
   }
 }
 
@@ -170,3 +208,5 @@ body {
     repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
   background-size: 100%, 1em 1em;
 }
+
+/* The end */
