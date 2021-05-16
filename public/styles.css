@@ -61,17 +61,19 @@ body {
 @keyframes ballColorChange {
   20% {
     background: rgb(255, 72, 0);
+    background-image: radial-gradient(circle at top, rgb(190, 54, 0), 50%, #000);
   }
   40% {
     background: gold;
-    
+    background-image: radial-gradient(circle at top, rgb(177, 154, 23), 50%, #000);
   }
   60% {
     background: rgb(30, 155, 4);
-   
+    background-image: radial-gradient(circle at top, rgb(28, 151, 3), 50%, #000);
   }
   80% {
-  background: rgb(7, 44, 44);
+  background: rgb(31, 187, 187);
+  background-image: radial-gradient(circle at top, rgb(36, 185, 185), 50%, #000);
   }
 }
 
@@ -206,6 +208,27 @@ body {
   background-image: radial-gradient(#0000, #000 75%),
     repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
   background-size: 100%, 1em 1em;
+  animation: florColorChange var(--rotateSpeed) infinite linear;
+}
+@keyframes florColorChange {
+  0% {
+    background-image: radial-gradient(#0000, #000 75%),
+    repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
+  }
+  40% {
+    background-image: radial-gradient(#0000, #000 60%),
+    repeating-conic-gradient(from 45deg, rgb(230, 226, 2) 0deg 90deg, rgb(94, 92, 0) 90deg 180deg);
+    /* background: rgb(230, 226, 2); */
+  }
+  80% {
+    background-image: radial-gradient(#0000, #000 60%),
+    repeating-conic-gradient(from 45deg, rgb(199, 12, 12) 0deg 90deg, rgb(102, 8, 8) 90deg 180deg);
+    /* background: rgb(199, 12, 12); */
+  }
+  100% {
+    background-image: radial-gradient(#0000, #000 75%),
+    repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
+  }
 }
 
 /* The end */
