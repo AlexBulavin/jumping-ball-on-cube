@@ -75,7 +75,6 @@ body {
   }
 }
 
-
 .cube {
   width: 2em;
   height: 2em;
@@ -83,8 +82,7 @@ body {
   bottom: -1em;
   left: -1em;
   animation: 
-  cubeHight var(--bounceSpeed) infinite linear,
-  cubeColorChange var(--rotateSpeed) infinite linear;
+  cubeHight var(--bounceSpeed) infinite linear;
 }
 @keyframes cubeHight {
   0%,
@@ -162,6 +160,7 @@ body {
   height: 100%;
   background: var(--boxColor);
   box-shadow: 0 0 0.5em #000a inset;
+  animation: cubeColorChange var(--rotateSpeed) infinite linear;
 }
 
 .front {
@@ -184,9 +183,8 @@ body {
   background: var(--boxColor);
   transform: translateY(-50%) rotateX(90deg);
   box-shadow: 0 0 0.5em #000a inset;
+  animation: cubeColorChange var(--rotateSpeed) infinite linear;
 }
-
-
 
 .bottom {
   position: absolute;
@@ -196,6 +194,7 @@ body {
   bottom: 0;
   transform: translateY(50%) rotateX(90deg);
   box-shadow: 0 0 0.5em #000a;
+  animation: cubeColorChange var(--rotateSpeed) infinite linear;
 }
 
 .floor {
